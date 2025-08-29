@@ -3,7 +3,7 @@ import pandas as pd
 from textblob import TextBlob
 
 # Initialize News API Client
-newsapi = NewsApiClient(api_key="b72173ad99a44841b9711f489cff881e")
+newsapi = NewsApiClient(api_key="your_api_key")
 
 # Fetch AI-related news
 ai_news = newsapi.get_everything(
@@ -37,3 +37,4 @@ for i, row in enumerate(df[["title", "sentiment"]].values, start=1):
 
 # Save to CSV
 df.to_csv("ai_news_with_sentiment.csv", index=False)
+
